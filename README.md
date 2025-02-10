@@ -13,4 +13,4 @@
 
 ****
 
-Neste repositório podemos encontrar as minhas resoluções para os TPC's propostos ao longo do semestre na unidade curricular de Processamento de Linguagens.
+Neste repositório podemos encontrar as minhas resoluções para os TPC's propostos ao longo do semestre na unidade curricular de Engenharia Web.
