@@ -17,7 +17,7 @@ O programa desenvolvido processa um ficheiro JSON com dados de reparações auto
 
 ##### Processamento de Dados
 
-Comecei por criar um programa em python ([_editReparacoes.py_](editReparacoes.py))que, através da função [__editReparacoes_](editReparacoes.py#L3), carrega os dados do ficheiro [_dataset_reparacoes.json_](dataset_reparacoes.json) e reorganiza a informação em três categorias principais:
+Comecei por criar um programa em python ([_editReparacoes.py_](editReparacoes.py))que, através da função [__editReparacoes_](editReparacoes.py#L3#L66), carrega os dados do ficheiro [_dataset_reparacoes.json_](dataset_reparacoes.json) e reorganiza a informação em três categorias principais:
 - **[Reparações:](reparacoes_reorganizadas.json#L2#90041)** Cada reparação é identificada por um ID único e inclui informações sobre o cliente, a viatura e as intervenções realizadas.
 - **[Intervenções:](reparacoes_reorganizadas.json#L90042#L90168)** São extraídos e organizados os códigos, nomes e descrições das intervenções efetuadas.
 - **[Viaturas:](reparacoes_reorganizadas.json#L90169#170088)** São registadas as viaturas reparadas, evitando duplicação e acumulando o número de intervenções associadas e os respetivos códigos.
