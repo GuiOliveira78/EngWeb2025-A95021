@@ -1,0 +1,8 @@
+1. json-server a funcionar
+2. Aplicação em nodejs
+
+
+Página principal:
+    · Lista de reparações --> nova página com Tabela com lista --> cada reparação deve ter o link para a reparação em si
+    · Lista de intervenções
+    · Lista de veículos
