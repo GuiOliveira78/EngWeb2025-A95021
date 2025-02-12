@@ -18,9 +18,9 @@ O programa desenvolvido processa um ficheiro JSON com dados de reparações auto
 ##### Processamento de Dados
 
 Comecei por criar um programa em python ([_editReparacoes.py_](editReparacoes.py))que, através da função [__editReparacoes_](editReparacoes.py#L3), carrega os dados do ficheiro [_dataset_reparacoes.json_](dataset_reparacoes.json) e reorganiza a informação em três categorias principais:
-- **[Reparações:](reparacoes_reorganizadas.json#L2)** Cada reparação é identificada por um ID único e inclui informações sobre o cliente, a viatura e as intervenções realizadas.
-- **[Intervenções:](reparacoes_reorganizadas.json#L90042)** São extraídos e organizados os códigos, nomes e descrições das intervenções efetuadas.
-- **[Viaturas:](reparacoes_reorganizadas.json#L90169)** São registadas as viaturas reparadas, evitando duplicação e acumulando o número de intervenções associadas e os respetivos códigos.
+- **[Reparações:](reparacoes_reorganizadas.json#L2#90041)** Cada reparação é identificada por um ID único e inclui informações sobre o cliente, a viatura e as intervenções realizadas.
+- **[Intervenções:](reparacoes_reorganizadas.json#L90042#L90168)** São extraídos e organizados os códigos, nomes e descrições das intervenções efetuadas.
+- **[Viaturas:](reparacoes_reorganizadas.json#L90169#170088)** São registadas as viaturas reparadas, evitando duplicação e acumulando o número de intervenções associadas e os respetivos códigos.
 
 O resultado é guardado no ficheiro [_reparacoes_reorganizadas.json_](reparacoes_reorganizadas.json), que será utilizado como fonte de dados para o JSON Server.
 
@@ -28,12 +28,12 @@ O resultado é guardado no ficheiro [_reparacoes_reorganizadas.json_](reparacoes
 
 Através do servidor construído em [_server.js_](server.js), é disponibilizada uma API em Node.js que permite consultar as listas de reparações, intervenções e viaturas. O servidor escuta na porta 1234 e responde a diferentes pedidos:
 - **[/](server.js#L12#L21)** → Página principal com links para as listas de reparações, intervenções e viaturas.
-- **[/reparacoes](server.js#L23)** → Lista todas as reparações registadas.
-- **[/reparacoes/{id}](server.js#L48)** → Exibe detalhes sobre uma reparação específica.
-- **[/intervencoes](server.js#L78)** → Lista todas as intervenções registadas.
-- **[/intervencoes/{codigo}](server.js#L99)** → Apresenta detalhes de uma intervenção específica.
-- **[/viaturas](server.js#L120)** → Lista todas as viaturas registadas.
-- **[/viaturas/{matricula}](server.js#L141)** → Exibe informações sobre uma viatura específica.
+- **[/reparacoes](server.js#L23#L46)** → Lista todas as reparações registadas.
+- **[/reparacoes/{id}](server.js#L48#L76)** → Exibe detalhes sobre uma reparação específica.
+- **[/intervencoes](server.js#L78#L97)** → Lista todas as intervenções registadas.
+- **[/intervencoes/{codigo}](server.js#L99#L118)** → Apresenta detalhes de uma intervenção específica.
+- **[/viaturas](server.js#L120#L139)** → Lista todas as viaturas registadas.
+- **[/viaturas/{matricula}](server.js#L141#L166)** → Exibe informações sobre uma viatura específica.
 
 O servidor obtém os dados do JSON server criado anteriormente que se encontra na porta 3000, utilizando Axios para fazer as requisições HTTP. Caso ocorra um erro, são retornadas mensagens apropriadas com os códigos de estado correspondentes.
 
