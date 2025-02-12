@@ -27,7 +27,7 @@ O resultado é guardado no ficheiro [_reparacoes_reorganizadas.json_](reparacoes
 ##### Servidor Web
 
 Através do servidor construído em [_server.js_](server.js), é disponibilizada uma API em Node.js que permite consultar as listas de reparações, intervenções e viaturas. O servidor escuta na porta 1234 e responde a diferentes pedidos:
-- **[/](server.js#L12)** → Página principal com links para as listas de reparações, intervenções e viaturas.
+- **[/](server.js#L12#L21)** → Página principal com links para as listas de reparações, intervenções e viaturas.
 - **[/reparacoes](server.js#L23)** → Lista todas as reparações registadas.
 - **[/reparacoes/{id}](server.js#L48)** → Exibe detalhes sobre uma reparação específica.
 - **[/intervencoes](server.js#L78)** → Lista todas as intervenções registadas.
