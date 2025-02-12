@@ -44,7 +44,7 @@ Criei ainda um pequeno programa em python ([_checkMatriculas.py_](checkMatricula
 ### Resultados (lista com apontadores para os ficheiros)
 Ficheiros:
 - [_dataset_reparacoes.json_](dataset_reparacoes.json) (Dataset Original)
-    •   [_checkMatriculas.py_](checkMatriculas.py)
-    •	[_editReparacoes.py_](editReparacoes.py)
-    •   [_reparacoes_reorganizadas.json_](reparacoes_reorganizadas.json) (Dataset Reorganizado)
-    •	[_server.js_](server.js)
+- [_checkMatriculas.py_](checkMatriculas.py)
+- [_editReparacoes.py_](editReparacoes.py)
+- [_reparacoes_reorganizadas.json_](reparacoes_reorganizadas.json) (Dataset Reorganizado)
+- [_server.js_](server.js)
