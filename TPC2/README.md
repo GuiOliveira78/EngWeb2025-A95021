@@ -25,7 +25,7 @@ Para isto criei o ficheiro [escola_server.js](./escola_server.js) onde é criado
 - **[/w3.css](./escola_server.js#L113#L124)** -> stylesheet
 - **[/favicon.ico](./escola_server.js#L125#L136)** -> favicon
 
-Todos os pedidos (exceto **/w3.css** e **/favicon.ico**) têm uma página _html_ pré definida em [mypages.js](./mypages.js) que será usada pelo servidor para gerar a página do respetivo pedido com as informações pretendidas. Em algumas das páginas podemos encontrar referências (_href_) que nos redirecionam para outras páginas referidas acima.
+Todos os pedidos (exceto **/w3.css** e **/favicon.ico**) têm uma página _html_ predefinida em [mypages.js](./mypages.js) que será usada pelo servidor para gerar a página do respetivo pedido com as informações pretendidas. Em algumas das páginas podemos encontrar referências (_href_) que nos redirecionam para outras páginas referidas acima.
 
 ### Resultados (lista com apontadores para os ficheiros)
 - [db.json](./db.json)
