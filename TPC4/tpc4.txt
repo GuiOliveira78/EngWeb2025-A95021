@@ -1,5 +1,0 @@
-Usar dataset cinema.json (continuar o que foi feito na T5)
-
-Acrescentar 5ª coluna com Opções (editar e apagar)
-
-Clicar no nome de ator leva para a página de ator onde tem os filmes em que participou
