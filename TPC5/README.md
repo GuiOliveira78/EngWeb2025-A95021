@@ -17,5 +17,5 @@ Este TPC teve como objetivo criar uma aplicação de gestão de alunos. Para tal
 O MongoDB é usada para persistência de dados, e o Mongoose facilita a comunicação entre o backend e o banco de dados.
 
 ### Resultados (lista com apontadores para os ficheiros)
-[API de dados](./apiAlunos/)
-[Aplicação Web](./appAlunos/)
+- [API de dados](./apiAlunos/)
+- [Aplicação Web](./appAlunos/)
