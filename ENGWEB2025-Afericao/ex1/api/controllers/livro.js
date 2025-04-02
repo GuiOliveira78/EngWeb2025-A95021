@@ -1,18 +1,33 @@
 var Livro = require('../models/livro')
 
 module.exports.list = () => {
-    console.log("Fetching all books from the database...");
     return Livro
         .find()
         .exec()
-        .then(data => {
-            console.log("Books retrieved:", data);
-            return data;
-        })
-        .catch(error => {
-            console.error("Error fetching books:", error);
-            throw error;
-        });
+}
+
+module.exports.findByCharacter = (character) => {
+    return Livro
+        .find({ characters: { $in: [character]} }) // Insensitive case
+        .exec()
+}
+
+module.exports.findByGenre = (genre) => {
+    return Livro
+        .find({ genres: { $in: [genre] } })
+        .exec()
+}
+
+module.exports.listGenres = () => {
+    return Livro
+        .distinct('genres')
+        .exec()
+}
+
+module.exports.listCharacters = () => {
+    return Livro
+        .distinct('characters')
+        .exec()
 }
 
 module.exports.findById = id => {

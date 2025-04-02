@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/livros', livrosRouter);
+app.use('/books', livrosRouter);
 app.use('/', livrosRouter);
 
 // catch 404 and forward to error handler
