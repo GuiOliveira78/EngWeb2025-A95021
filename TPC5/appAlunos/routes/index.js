@@ -83,6 +83,7 @@ router.get('/alunos/delete/:id', function (req, res) {
     });
 });
 
+/* GET adicionar aluno */
 router.get('/alunos/add', function (req, res) {
   var d = new Date().toISOString().substring(0, 10)
   res.render('addAluno', { title: "Adicionar Aluno", data: d });

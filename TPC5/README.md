@@ -13,8 +13,8 @@
 <img src=https://i.imgur.com/ag9VyrP.jpg alt="Fotografia" style="width:20%;">
 
 ### Resumo
-Este TPC teve como objetivo criar uma aplicação de gestão de alunos. Para tal, utilizei Express para criar uma API RESTful e uma aplicação web, permitindo a gestão de alunos. A API permite operações de CRUD (criação, leitura, atualização e eliminação) de registros de alunos, enquanto a aplicação web fornece uma interface de usuário para interagir com esses dados. 
-O MongoDB é usada para persistência de dados, e o Mongoose facilita a comunicação entre o backend e o banco de dados.
+Este TPC teve como objetivo criar uma aplicação de gestão de alunos. Para tal, utilizei Express para criar uma API RESTful e uma aplicação web, permitindo a gestão de alunos. A API permite operações de CRUD (criação, leitura, atualização e eliminação) de registos de alunos, enquanto a aplicação web fornece uma interface de usuário para interagir com esses dados. 
+O MongoDB é usado para persistência de dados, e o Mongoose facilita a comunicação entre o backend e o banco de dados.
 
 ### Resultados (lista com apontadores para os ficheiros)
 - [API de dados](./apiAlunos/)

@@ -1,0 +1,26 @@
+Queries
+
+1.
+db.livros.countDocuments({ title: /\bLove\b/i })
+
+2.
+db.livros.find(
+  { author: /Austen/i },  // Verifica se "Austen" aparece na string do campo "author"
+  { title: 1, _id: 0 }    // Retorna apenas o título
+).sort({ title: 1 })      // Ordena alfabeticamente
+
+3.
+db.livros.distinct("author").sort()
+
+4.
+db.livros.aggregate([
+  { $unwind: "$genres" },                               // Divide o array "genres" para contar cada gênero separadamente
+  { $group: { _id: "$genres", count: { $sum: 1 } } },   // Agrupa e conta os livros por gênero
+  { $sort: { count: -1 } }                              // Ordena do gênero mais frequente para o menos frequente
+])
+
+5.
+db.livros.find(
+  { characters: "Sirius Black" },   // Filtra livros que têm "Sirius Black" na lista de personagens
+  { title: 1, isbn: 1, _id: 0 }     // Retorna apenas os campos "title" e "isbn"
+).sort({ title: 1 })                // Ordena os títulos alfabeticamente
