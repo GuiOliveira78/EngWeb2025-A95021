@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
 var mongoDB = 'mongodb://127.0.0.1:27017/livros'
 mongoose.connect(mongoDB)
@@ -12,6 +12,7 @@ connection.on('error', console.error.bind(console, 'Erro na conexão ao MongoDB'
 connection.once('open', () => console.log('Conexão ao MongoDB realizada com sucesso'))
 
 var livrosRouter = require('./routes/livros');
+var autoresRouter = require('./routes/autores');
 
 var app = express();
 
@@ -25,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/books', livrosRouter);
+app.use('/authors', autoresRouter);
 app.use('/', livrosRouter);
 
 // catch 404 and forward to error handler

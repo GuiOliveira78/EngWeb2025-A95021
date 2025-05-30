@@ -1,54 +1,60 @@
 var Livro = require('../models/livro')
 
-module.exports.list = () => {
+module.exports.List = () => {
     return Livro
         .find()
         .exec()
 }
 
-module.exports.findByCharacter = (character) => {
-    return Livro
-        .find({ characters: { $in: [character]} }) // Insensitive case
-        .exec()
-}
-
-module.exports.findByGenre = (genre) => {
-    return Livro
-        .find({ genres: { $in: [genre] } })
-        .exec()
-}
-
-module.exports.listGenres = () => {
-    return Livro
-        .distinct('genres')
-        .exec()
-}
-
-module.exports.listCharacters = () => {
-    return Livro
-        .distinct('characters')
-        .exec()
-}
-
-module.exports.findById = id => {
+module.exports.FindById = (id) => {
     return Livro
         .findById(id)
         .exec()
 }
 
-module.exports.insert = livro => {
+module.exports.FindByCharacter = (character) => {
+    return Livro
+        .find({ characters: { $in: [character] } }) // Insensitive case
+        .exec()
+}
+
+module.exports.FindByGenre = (genre) => {
+    return Livro
+        .find({ genres: { $in: [genre] } })
+        .exec()
+}
+
+module.exports.ListGenres = () => {
+    return Livro
+        .distinct('genres')
+        .exec()
+}
+
+module.exports.ListCharacters = () => {
+    return Livro
+        .distinct('characters')
+        .exec()
+}
+
+module.exports.Insert = (livro) => {
     var newLivro = new Livro(livro)
     return newLivro.save()
 }
 
-module.exports.update = (id, livro) => {
+module.exports.Delete = (id) => {
     return Livro
-        .findByIdAndUpdate(id, livro, {new : true})
+        .findByIdAndDelete(id)
         .exec()
 }
 
-module.exports.delete = id => {
+module.exports.Update = (id, livro) => {
     return Livro
-        .findByIdAndDelete(id)
+        .findByIdAndUpdate(id, livro, { new: true })
+        .exec()
+}
+
+module.exports.FindByAuthor = (author) => {
+    return Livro
+        .find({ author: { $regex: new RegExp('^' + author + '$', 'i') } }) // Pesquisa case-insensitive e exata
         .exec()
 }

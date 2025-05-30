@@ -1,10 +1,10 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
-var livrosSchema = new mongoose.Schema({
-    _id : {type : String, require : true},
-    title :  String,
+var livroSchema = new mongoose.Schema({
+    _id : { type: String, required: true },
+    title : String,
     series : String,
-    author : String,
+    author : [String],
     rating : String,
     description : String,
     language : String,
@@ -26,6 +26,6 @@ var livrosSchema = new mongoose.Schema({
     bbeScore : String,
     bbeVotes : String,
     price : String,
-}, {versionKey : false})
+}, { versionKey: false });
 
-module.exports = mongoose.model('livro', livrosSchema)
+module.exports = mongoose.model('Livro', livroSchema);
